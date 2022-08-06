@@ -13,7 +13,7 @@ int main(){
     Matrix<double> a(1000, 1000);
     Matrix<double> b(1000, 1000);
     
-	a.RandomMatrix();
+    a.RandomMatrix();
     b.RandomMatrix();
 	
     auto start = chrono::system_clock::now();

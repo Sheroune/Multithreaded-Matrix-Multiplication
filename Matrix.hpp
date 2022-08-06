@@ -167,7 +167,7 @@ Matrix<T> Matrix<T>::operator*(const Matrix<T> &smth) const{
     for(size_t i=0;i<GetParallel();i++)
         threads[i] = std::thread(&Matrix<T>::Multithread, std::ref(c), this, &smth, i, std::ref(prom[i]));
 	
-	for(size_t i=0;i<GetParallel();i++)
+    for(size_t i=0;i<GetParallel();i++)
         fut[i] = prom[i].get_future();
 	
     for(size_t i=0;i<GetParallel();i++)
